@@ -31,5 +31,19 @@ class StringSplitTest {
         String [] excepted2={"a","l","i","e","r","f","a","g","h","-"};
         assertArrayEquals(excepted2,solution2);
 
+    } @Test
+    public void evenCharacter() {
+        String[] solution = stringSplit.solution("aa");
+        String [] excepted={"a","a"};
+        assertArrayEquals(excepted,solution);
+
+        String[] solution1 = stringSplit.solution("alia");
+        String [] excepted1={"a","l","i","a"};
+        assertArrayEquals(excepted1,solution1);
+
+        String[] solution2 = stringSplit.solution("alierfagha");
+        String [] excepted2={"a","l","i","e","r","f","a","g","h","a"};
+        assertArrayEquals(excepted2,solution2);
+
     }
 }
