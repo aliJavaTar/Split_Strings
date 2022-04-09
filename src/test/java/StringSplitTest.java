@@ -17,33 +17,35 @@ class StringSplitTest {
         assertNull(solution);
     }
 
+
     @Test
-    public void oddCharacter() {
-        String[] solution = stringSplit.solution("a");
-        String [] excepted={"a-"};
-        assertArrayEquals(excepted,solution);
-
-        String[] solution1 = stringSplit.solution("ali");
-        String [] excepted1={"a","l","i","-"};
-        assertArrayEquals(excepted1,solution1);
-//
-//        String[] solution2 = stringSplit.solution("alierfagh");
-//        String [] excepted2={"a","l","i","e","r","f","a","g","h","-"};
-//        assertArrayEquals(excepted2,solution2);
-
-    } @Test
-    public void evenCharacter() {
+    public void evenCharacter()
+    {
         String[] solution = stringSplit.solution("aa");
-        String [] excepted={"a","a"};
+        String [] excepted={"aa"};
         assertArrayEquals(excepted,solution);
 
         String[] solution1 = stringSplit.solution("alia");
-        String [] excepted1={"a","l","i","a"};
+        String [] excepted1={"al","ia"};
         assertArrayEquals(excepted1,solution1);
 
         String[] solution2 = stringSplit.solution("alierfagha");
-        String [] excepted2={"a","l","i","e","r","f","a","g","h","a"};
+        String [] excepted2={"al","ie","rf","ag","ha"};
         assertArrayEquals(excepted2,solution2);
 
+    }
+    @Test
+    public void oddCharacter() {
+        String[] solution1 = stringSplit.solution("ali");
+        String [] excepted1={"al","i-"};
+        assertArrayEquals(excepted1,solution1);
+
+        String[] solution2 = stringSplit.solution("alier");
+        String [] excepted2={"al","ie","r-"};
+        assertArrayEquals(excepted2,solution2);
+
+        String[] solution3 = stringSplit.solution("alierfagh");
+        String [] excepted3={"al","ie","rf","ag","h-"};
+        assertArrayEquals(excepted3,solution3);
     }
 }
